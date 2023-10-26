@@ -16,14 +16,74 @@ body {
     justify-content: space-between;
 }
 
+.header-container {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .desktop-header {
     display: none;
+    align-items: center;
     gap: 40px;
     margin-right: auto;
     padding: 20px 40px 0 40px;
+    color: #686868;
 }
 
-.header .logo {
+.features:hover {
+    color: #151515;
+    cursor: pointer;
+}
+
+.company:hover {
+    color: #151515;
+    cursor: pointer;
+}
+
+.careers:hover {
+    color: #151515;
+    cursor: pointer;
+}
+
+.about:hover {
+    color: #151515;
+    cursor: pointer;
+}
+
+.header-container button {
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 16px;
+    height: 42px;
+    width: 104px;
+    color: #686868;
+    margin: 8px 16px 0 0;
+}
+
+.login {
+    border: none;
+    background-color: transparent;
+}
+
+.login:hover {
+    cursor: pointer;
+    color: #151515;
+}
+
+.register {
+    border: 1px solid #686868;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.register:hover {
+    cursor: pointer;
+    border-color: #151515;
+    color: #151515;
+}
+
+.logo {
     height: 35px;
 }
 
@@ -84,6 +144,8 @@ body {
     align-items: center;
     margin: 0 auto;
     padding: 48px 16px 16px 16px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .desktop {
@@ -143,6 +205,10 @@ body {
     }
 
     .desktop-header {
+        display: flex;
+    }
+
+    .header-container {
         display: flex;
     }
 
