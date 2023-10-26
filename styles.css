@@ -9,10 +9,18 @@ body {
     text-align: center;
 }
 
+
 .header {
     display: flex;
     padding: 16px;
     justify-content: space-between;
+}
+
+.desktop-header {
+    display: none;
+    gap: 40px;
+    margin-right: auto;
+    padding: 20px 40px 0 40px;
 }
 
 .header .logo {
@@ -24,7 +32,7 @@ body {
     width: 32px;
 }
 
-.hero-banner img {
+.hero-banner-mobile img {
     max-width: 100%;
 }
 
@@ -63,6 +71,13 @@ body {
     height: 48px;
 }
 
+.button:hover {
+    cursor: pointer;
+    border: 1px solid #151515;
+    color: #151515;
+    background-color: #FAFAFA;
+}
+
 .foot-box {
     display: flex;
     justify-content: space-around;
@@ -71,7 +86,90 @@ body {
     padding: 48px 16px 16px 16px;
 }
 
+.desktop {
+    display: none;
+}
+
+.desktop-main-header {
+    display: none;
+}
+
+.desktop-main-text {
+    display: none;
+}
+
+.desktop-foot-box {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 48px 16px 16px 16px;
+}
+
 .foot-logo {
     width: fit-content;
+    
+}
 
+@media (min-width: 748px) {
+    body {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+    .hero-banner-mobile {
+        display: none;
+    }
+    .main-container {
+        display: none;
+    }
+    .foot-box {
+        display: none;
+    }
+    .desktop {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: 60px;
+        gap: 125px;
+    }
+
+    .desktop-header {
+        display: flex;
+    }
+
+    .desktop-main-header {
+        display: flex;
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 80px;
+        letter-spacing: -1.11px;
+    }
+
+    .desktop-main-text {
+        display: flex;
+        color: #686868;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 500;
+        width: 445px;
+        padding-top: 48px;
+        padding-bottom: 51px;
+    }
+
+    .desktop-foot-box {
+        display: flex;
+        padding: 101px 0 0 0;
+    }
+    .hero-banner-desktop img {
+        max-height: 640px;
+    }
 }
